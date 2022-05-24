@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using log4net.Config;
 
 namespace TestAppWpf
 {
@@ -16,7 +17,7 @@ namespace TestAppWpf
         {
             base.OnStartup(e);
 
-            log4net.Config.BasicConfigurator.Configure();
+            BasicConfigurator.Configure();
         }
     }
 }
