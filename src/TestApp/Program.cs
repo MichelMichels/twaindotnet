@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using log4net.Config;
 
 namespace TestApp
 {
@@ -13,9 +14,10 @@ namespace TestApp
         [STAThread]
         static void Main()
         {
-            log4net.Config.BasicConfigurator.Configure();
+            BasicConfigurator.Configure();
 
             Application.EnableVisualStyles();
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
